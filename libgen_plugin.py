@@ -24,7 +24,7 @@ USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko"
 #####################################################################
 def search_libgen(query, max_results=10, timeout=60):
     res = "25" if max_results <= 25 else "50" if max_results <= 50 else "100"
-    search_url = f"{BASE_URL}/search.php?req={query.decode()}&res={res}&view=simple"
+    search_url = f"{BASE_URL}/fiction/search.php?req={query.decode()}&res={res}&view=simple"
     print("searching: " + search_url)
     print("max results: " + str(max_results))
     br = browser(user_agent=USER_AGENT)
